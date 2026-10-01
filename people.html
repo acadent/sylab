@@ -1,32 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>People — Systems Research Laboratory</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://acadent.github.io/assets/css/main.css">
+  <link rel="icon" href="https://acadent.github.io/images/favicon.ico">
+  <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";</script>
 </head>
 <body>
-  <header>
-    <div class="wrap banner">
-      <div>
-        <p>Florida International University</p>
-        <h1><a href="index.html">Systems Research Laboratory</a></h1>
+  <div class="masthead">
+    <div class="masthead__inner-wrap">
+      <div class="masthead__menu">
+        <nav id="site-nav" class="greedy-nav">
+          <button><div class="navicon"></div></button>
+          <ul class="visible-links">
+            <li class="masthead__menu-item masthead__menu-item--lg"><a href="index.html">Systems Research Laboratory</a></li>
+            <li class="masthead__menu-item"><a href="index.html">Home</a></li>
+            <li class="masthead__menu-item"><a href="people.html">People</a></li>
+            <li class="masthead__menu-item"><a href="projects.html">Projects</a></li>
+            <li class="masthead__menu-item"><a href="publications.html">Publications</a></li>
+            <li class="masthead__menu-item"><a href="sponsors.html">Sponsors</a></li>
+          </ul>
+          <ul class="hidden-links hidden"></ul>
+        </nav>
       </div>
     </div>
-    <div class="wrap">
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="people.html" aria-current="page">People</a>
-        <a href="projects.html">Projects</a>
-        <a href="publications.html">Publications</a>
-        <a href="sponsors.html">Sponsors</a>
-      </nav>
+  </div>
+  <div id="main" role="main">
+    <div class="sidebar sticky">
+      <div itemscope itemtype="http://schema.org/Person">
+        <div class="author__avatar"><img src="https://acadent.github.io/images/raju.png" class="author__avatar" alt="Raju Rangaswami"></div>
+        <div class="author__content">
+          <h3 class="author__name">Raju Rangaswami</h3>
+          <p class="author__bio">Eminent Scholar Chaired Professor, Knight Foundation School of Computing and Information Sciences</p>
+        </div>
+        <div class="author__urls-wrapper">
+          <button class="btn btn--inverse">Follow</button>
+          <ul class="author__urls social-icons">
+            <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Miami, FL</li>
+            <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Florida International Univ</li>
+            <li><a href="https://www.linkedin.com/in/raju-rangaswami-7b3b6849"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+            <li><a href="https://github.com/acadent"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+            <li><a href="https://scholar.google.com/citations?user=-Y_xfI8AAAAJ"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="wrap">
-    <main>
-      <h2>Faculty</h2>
+    <article class="page">
+      <div class="page__inner-wrap">
+        <header><h1 class="page__title">People</h1></header>
+        <section class="page__content">
+<h2>Faculty</h2>
       <ul>
         <li><a href="https://acadent.github.io/">Raju Rangaswami</a></li>
       </ul>
@@ -51,7 +76,7 @@
 
       <h2>Alumni</h2>
       <h3>PhD</h3>
-      <ul class="names">
+      <ul>
         <li>Liana Valdes</li>
         <li>Steven Lyons</li>
         <li>Daniel Campello</li>
@@ -65,7 +90,7 @@
         <li>Sajib Kundu</li>
       </ul>
       <h3>Masters</h3>
-      <ul class="names">
+      <ul>
         <li>Ashikee Ghosh</li>
         <li>Ricardo Santana</li>
         <li>Hector Lopez</li>
@@ -79,7 +104,7 @@
         <li>Eric Sanchez</li>
       </ul>
       <h3>Bachelors</h3>
-      <ul class="names">
+      <ul>
         <li>Daniel Costaesa</li>
         <li>Daniel Nunez Dominguez</li>
         <li>Christopher Kerrutt</li>
@@ -107,10 +132,23 @@
         <li>Stephen Ballesteros</li>
         <li>Shannon (Darya) Chepurna</li>
       </ul>
-    </main>
+        </section>
+      </div>
+    </article>
   </div>
-  <footer>
-    Knight Foundation School of Computing and Information Sciences, Florida International University
-  </footer>
+  <div class="page__footer">
+    <footer>
+      <div class="page__footer-follow">
+        <ul class="social-icons">
+          <li><strong>Follow:</strong></li>
+          <li><a href="https://linkedin.com/in/raju-rangaswami-7b3b6849"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+          <li><a href="http://github.com/acadent"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+          <li><a href="https://scholar.google.com/citations?user=-Y_xfI8AAAAJ"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a></li>
+        </ul>
+      </div>
+      <div class="page__footer-copyright">&copy; 2026 Systems Research Laboratory.</div>
+    </footer>
+  </div>
+  <script src="https://acadent.github.io/assets/js/main.min.js"></script>
 </body>
 </html>
