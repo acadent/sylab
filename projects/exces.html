@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXternal Caching in Energy Saving Storage Systems (EXCES) — Systems Research Laboratory</title>
+  <link rel="stylesheet" href="https://acadent.github.io/assets/css/main.css">
+  <link rel="icon" href="https://acadent.github.io/images/favicon.ico">
+  <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";</script>
+</head>
+<body>
+  <div class="masthead">
+    <div class="masthead__inner-wrap">
+      <div class="masthead__menu">
+        <nav id="site-nav" class="greedy-nav">
+          <button><div class="navicon"></div></button>
+          <ul class="visible-links">
+            <li class="masthead__menu-item masthead__menu-item--lg"><a href="../index.html">Systems Research Laboratory</a></li>
+            <li class="masthead__menu-item"><a href="../index.html">Home</a></li>
+            <li class="masthead__menu-item"><a href="../people.html">People</a></li>
+            <li class="masthead__menu-item"><a href="../projects.html">Projects</a></li>
+            <li class="masthead__menu-item"><a href="../publications.html">Publications</a></li>
+            <li class="masthead__menu-item"><a href="../sponsors.html">Sponsors</a></li>
+          </ul>
+          <ul class="hidden-links hidden"></ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div id="main" role="main">
+    <div class="sidebar sticky">
+      <div itemscope itemtype="http://schema.org/Person">
+        <div class="author__avatar"><img src="https://acadent.github.io/images/raju.png" class="author__avatar" alt="Raju Rangaswami"></div>
+        <div class="author__content">
+          <h3 class="author__name">Raju Rangaswami</h3>
+          <p class="author__bio">Eminent Scholar Chaired Professor, Knight Foundation School of Computing and Information Sciences</p>
+        </div>
+        <div class="author__urls-wrapper">
+          <button class="btn btn--inverse">Follow</button>
+          <ul class="author__urls social-icons">
+            <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Miami, FL</li>
+            <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Florida International Univ</li>
+            <li><a href="https://www.linkedin.com/in/raju-rangaswami-7b3b6849"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+            <li><a href="https://github.com/acadent"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+            <li><a href="https://scholar.google.com/citations?user=-Y_xfI8AAAAJ"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <article class="page">
+      <div class="page__inner-wrap">
+        <header><h1 class="page__title">EXternal Caching in Energy Saving Storage Systems (EXCES)</h1></header>
+        <section class="page__content">
+<h3 id="authors">Authors</h3>
+
+<ul>
+<li> <a href="http://www.cs.fiu.edu/~lusec001/">Luis Useche</a>
+</li>
+<li> <a href="http://www.cs.fiu.edu/~jguer022/">Jorge Guerra</a>
+</li>
+<li> <a href="http://www.cs.fiu.edu/~mbhad001/">Medha Bhadkamkar</a>
+</li>
+<li> <a href="http://www.cs.fiu.edu/~malar002/">Mauricio Alarcon</a>
+</li>
+<li> <a href="http://www.cs.fiu.edu/~raju/">Raju Rangaswami</a>
+</li>
+</ul>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>
+The need for energy-efficient storage systems for personal computers and data centers is well established. Being the only mechanic device in todays computers, the disk is the third most power-hungry component after the CPU and display. Different proposals to adress this problem have been done including spin down policies for the disk, using data migration across drives and energy-aware prefetching and caching.
+</p>
+
+<p>
+We designed and implement an energy-optimizer system for the Linux kernel (2.6 series) that uses an external device for caching and prefetching data so it can be retrieved directly from this media. This allows the disk to spin-down for long periods of time and save energy.
+</p>
+
+<h3 id="exces">EXCES</h3>
+
+<p>
+EXCES is a system implemented for the Linux kernel (2.6 series) that optimize the secondary storage to save energy by using an external caching device (ECD) for caching and prefetching data. The idea is keep the hottest data of the system in the ECD so accesses to the disk are not required. This allows the disk to spin-down long periods of time and save energy.
+</p>
+
+<p>
+<a href="https://sylab-srv.cs.fiu.edu/_detail/projects/exces/exces_function.jpeg?id=projects%3Aexces%3Astart"><img src="https://sylab-srv.cs.fiu.edu/_media/projects/exces/exces_function.jpeg" title="exces_function.jpeg" alt="exces_function.jpeg" /></a>
+</p>
+
+<p>
+EXCES provided us with very difficult challenges:
+</p>
+<ul>
+<li> Identify the hottest data in the system.
+</li>
+<li> Make movement of data between devices.
+</li>
+<li> Redirect the I/O request to the appropiate devices.
+</li>
+</ul>
+
+<p>
+For further detail in the design and implementation of EXCES, please refer to the paper(s) below.
+</p>
+
+<h3 id="publications">Publications</h3>
+
+<ul>
+<li> <strong>EXCES: EXternal Caching in Energy Saving Storage Systems</strong> <a href="https://sylab-srv.cs.fiu.edu/_media/projects/exces/exces-hpca08.pdf">pdf</a> <a href="https://sylab-srv.cs.fiu.edu/_media/projects/exces/exces-hpca08.ps">ps</a><br/>
+ Luis Useche, Jorge Guerra, Medha Bhadkamkar, Mauricio Alarcon, and Raju Rangaswami<br/>
+Proceedings of IEEE International Symposium on High-Performance Computer Architecture (HPCA), February, 2008.
+</li>
+</ul>
+
+<h3 id="the_code">The Code</h3>
+
+<p>
+The code is mostly organized by the components described in the paper above. Each folder contains the implementation of one component in the system. Next, it is presented the description of each folder:
+</p>
+
+<h4 id="analyzer">analyzer</h4>
+
+<p>
+This folder contains the implementation of the components to analyze the data. Includes: the planner to perform the reconfigurations (<code>ls_planner.c</code>), the component that rank the pages (<code>page_ranker.c</code>) and the algorithm to find the k-highest ranked pages (<code>topk.c</code>).
+</p>
+
+<h4 id="api">api</h4>
+
+<p>
+Contains most of the implementation of the data structures and some utility functions. Includes: function to substitute the <code>make_request</code> of the target device to the EXCES handler (<code>able_layer_insert.c</code>), a bitarray implementation (<code>bitarray.c</code>), structure to represent the mapping from disk to ECD (<code>block_map_table.c</code>) and function to print a bio (<code>print_bio.c</code>) used mostly for debugging.
+</p>
+
+<h4 id="include">include</h4>
+
+<p>
+Headers for the shared functions.
+</p>
+
+<h4 id="indirection">indirection</h4>
+
+<p>
+Contains the indirector of the requests (<code>ls_indirection.c</code>). This file includes the handler of EXCES which substitute the original <code>make_request</code>. It also contains the initialization and cleaning of the module.
+</p>
+
+<h4 id="reconfigurator">reconfigurator</h4>
+
+<p>
+This folder list all the files which implement the reconfigurator component of EXCES. Includes: Function that execute the reconfiguration and perform the movement of the blocks between devices (<code>io_reconf.c</code>), structure to keep the reconfiguration state of each block (<code>reconf_phase.c</code>) and the component that decides if a reconfiguration is required (<code>reconf_trigger.c</code>).
+</p>
+
+<h3 id="download">Download</h3>
+
+<p>
+WARNING! This code should be used just for research purpose. Note that it destroys the file system of the external device used. Also, it is not entirely bug-free and in rare cases it can damage the file system of the optimized device. This code can be compiled in the Linux kernel version 2.6.24. <a href="https://sylab-srv.cs.fiu.edu/_media/projects/exces/exces.tar.gz">Download EXCES</a>.
+</p>
+        </section>
+      </div>
+    </article>
+  </div>
+  <div class="page__footer">
+    <footer>
+      <div class="page__footer-follow">
+        <ul class="social-icons">
+          <li><strong>Follow:</strong></li>
+          <li><a href="https://linkedin.com/in/raju-rangaswami-7b3b6849"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+          <li><a href="http://github.com/acadent"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+          <li><a href="https://scholar.google.com/citations?user=-Y_xfI8AAAAJ"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a></li>
+        </ul>
+      </div>
+      <div class="page__footer-copyright">&copy; 2026 Systems Research Laboratory.</div>
+    </footer>
+  </div>
+  <script src="https://acadent.github.io/assets/js/main.min.js"></script>
+</body>
+</html>

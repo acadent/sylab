@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Active Block Layer Extensions (ABLE) — Systems Research Laboratory</title>
+  <link rel="stylesheet" href="https://acadent.github.io/assets/css/main.css">
+  <link rel="icon" href="https://acadent.github.io/images/favicon.ico">
+  <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";</script>
+</head>
+<body>
+  <div class="masthead">
+    <div class="masthead__inner-wrap">
+      <div class="masthead__menu">
+        <nav id="site-nav" class="greedy-nav">
+          <button><div class="navicon"></div></button>
+          <ul class="visible-links">
+            <li class="masthead__menu-item masthead__menu-item--lg"><a href="../index.html">Systems Research Laboratory</a></li>
+            <li class="masthead__menu-item"><a href="../index.html">Home</a></li>
+            <li class="masthead__menu-item"><a href="../people.html">People</a></li>
+            <li class="masthead__menu-item"><a href="../projects.html">Projects</a></li>
+            <li class="masthead__menu-item"><a href="../publications.html">Publications</a></li>
+            <li class="masthead__menu-item"><a href="../sponsors.html">Sponsors</a></li>
+          </ul>
+          <ul class="hidden-links hidden"></ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div id="main" role="main">
+    <div class="sidebar sticky">
+      <div itemscope itemtype="http://schema.org/Person">
+        <div class="author__avatar"><img src="https://acadent.github.io/images/raju.png" class="author__avatar" alt="Raju Rangaswami"></div>
+        <div class="author__content">
+          <h3 class="author__name">Raju Rangaswami</h3>
+          <p class="author__bio">Eminent Scholar Chaired Professor, Knight Foundation School of Computing and Information Sciences</p>
+        </div>
+        <div class="author__urls-wrapper">
+          <button class="btn btn--inverse">Follow</button>
+          <ul class="author__urls social-icons">
+            <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Miami, FL</li>
+            <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Florida International Univ</li>
+            <li><a href="https://www.linkedin.com/in/raju-rangaswami-7b3b6849"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+            <li><a href="https://github.com/acadent"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+            <li><a href="https://scholar.google.com/citations?user=-Y_xfI8AAAAJ"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <article class="page">
+      <div class="page__inner-wrap">
+        <header><h1 class="page__title">Active Block Layer Extensions (ABLE)</h1></header>
+        <section class="page__content">
+<h3 id="authors">Authors</h3>
+
+<ul>
+<li> <a href="http://www.cs.fiu.edu/~jguer022/">Jorge Guerra</a>
+</li>
+<li> <a href="http://www.cs.fiu.edu/~lusec001/">Luis Useche</a>
+</li>
+<li> <a href="http://www.cs.fiu.edu/~mbhad001/">Medha Bhadkamkar</a>
+</li>
+<li> <a href="http://www.cs.fiu.edu/~rkoll001/">Ricardo Koller</a>
+</li>
+<li> Michael Torchio
+</li>
+<li> Robert Parks
+</li>
+<li> Leonardo Marmol (REU)
+</li>
+<li> Daniel Galano (REU)
+</li>
+<li> Jaime Soto (REU)
+</li>
+<li> Jesus Ramos (REU)
+</li>
+<li> Steven Lyons (REU)
+</li>
+<li> Christopher Kerrutt (REU)
+</li>
+<li> Andy Norcisa (REU)
+</li>
+<li> <a href="http://www.cs.fiu.edu/~raju/">Raju Rangaswami</a>
+</li>
+</ul>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>
+The Active Block Layer Extensions (ABLE) project presents a new approach to realizing self-managing storage systems.  It makes two contributions.
+First, it creates an evolvable block layer software infrastructure that substantially reduces the complexity involved in building self-managing storage systems by raising the level of abstraction for their development.  Second, it develops a novel theory of storage extensions that provides
+a logic framework for analyzing extensions developed at the block layer.  This theory allows system administrators to make well-reasoned configuration and deployment choices for their systems that accurately reflect system priorities.  The software infrastructure substantially reduced the complexity for each of the five storage extensions that we developed, and across each of the five complexity metrics that we used.
+</p>
+
+<p>
+The theoretical framework develops nine basic rules that help analyzing a stack of storage extensions.  An examination of several instances of the use of these rules with concrete extensions provides a illustration and informal validation of the theory.
+</p>
+
+<h3 id="able">ABLE</h3>
+
+<p>
+Recent years have seen innovation by the storage research community in
+developing storage self-management extensions.
+Often, these provide critical improvements in meeting the manifold
+storage system goals of reliability, performance, power-savings, etc.,
+hence, are acknowledged successes within the research community.
+However, fundamental challenges remain when translating storage
+self-management into practice.
+These challenges constrain adoption of these ideas in commodity systems,
+and thus diminish their impact on productions storage environments.
+</p>
+
+<p>
+Based on our experiences developing and deploying storage
+self-management extensions, we have identified two broad factors
+holding back large-scale adoption of self-managing storage systems.
+First, the operating system, the typical development environment for
+self-management extensions, is a complex building block which makes
+extensions extremely difficult to develop and validate.
+Second, reasoning about how deployed extensions affect the stored data
+and access it is an undeveloped science; consequently, administrators
+find themselves ill-equipped to make sound deployment decisions and
+thus much rather choose <em>not to deploy what they don&#039;t understand</em>.
+Addressing these challenges, we believe, will help developers and
+administrators by mitigating the complexities of their respective
+roles, thus accelerating the rate of development and adoption of
+storage self-management extensions.
+</p>
+
+<p>
+The Active Block Layer Extensions (ABLE) project develops theory and
+systems infrastructure that, when put together, comprehensively address
+the challenges outlined above.
+ABLE advocates and supports self-management extensions that are
+built at the <em>block layer</em>, and thus export a <em>logical block
+  interface</em> to storage clients (e.g. file systems) for accessing an
+underlying (local or remote) block device.
+Block layer extensions automatically inherit several desirable
+characteristics such as access to both process and device context of
+I/O operations, a clean interface with a simple data consistency
+contract to build upon, file-system independence and accessibility,
+I/O scheduling services, and easy arbitration of storage resources.
+We examine these motivating reasons in detail in <a href="https://sylab-srv.cs.fiu.edu/_media/projects/able/able-speed08.pdf">The Case for Active Block Layer Extensions</a>.
+</p>
+
+<p>
+The ABLE project makes two contributions.
+First, an evolvable block-layer software infrastructure that
+implements a suite of block layer primitive functionality commonly
+used by self-management extensions as an in-kernel library (see Figure below).
+These primitives represents a radical improvement in the level of
+abstraction for developing self-management extensions, thus aiding
+developers build robust self-management extensions faster.
+The software infrastructure also provides a central point for
+evolving, examining, and validating block layer primitives by the
+larger storage research and development communities.
+Second, a novel theory of block layer extensions that provides a logic
+framework for understanding how storage extensions affect the data
+path.
+This theory enables modeling and classifying the behavior of
+individual extensions and analyzing the influence of extension
+aggregates on data and data accesses.
+When put into practice, this theory can guide administrators make
+sound deployment decisions for multiple self-management extensions
+that accurately reflect high-level defined policies.
+Note that extensions are assumed to be ``well-behaved&#039;&#039; in that each
+extension ensures block consistency for data that it handles.
+</p>
+
+<p>
+<a href="https://sylab-srv.cs.fiu.edu/_detail/projects/able/able-arch.png?id=projects%3Aable%3Astart"><img src="https://sylab-srv.cs.fiu.edu/_media/projects/able/able-arch.png" title="ABLE Architecture" alt="ABLE Architecture" /></a>
+</p>
+
+<p>
+For further detail in the design and implementation of ABLE, please refer to the paper(s) below.
+</p>
+
+<h3 id="publications">Publications</h3>
+
+<ul>
+<li> <strong><a href="https://sylab-srv.cs.fiu.edu/lib/exe/fetch.php?tok=07f181&amp;media=http%3A%2F%2Fwww.cs.fiu.edu%2F%257Eraju%2FWWW%2Fpublications%2Ffast2013%2Fpaper.pdf">Write Policies for Host-side Flash Caches|</a></strong> <br/>
+ Ricardo Koller, Leonardo Marmol, Raju Rangaswami, Swaminathan Sundararaman, Nisha Talagala, and Ming Zhao <br/>
+Proceedings of the USENIX Conference on File and Storage Technologies, February, 2013.
+</li>
+</ul>
+<ul>
+<li> <strong><a href="https://sylab-srv.cs.fiu.edu/_media/projects/srcmap/edt-fast11.pdf">Cost Effective Storage Using Extent Based Dynamic Tiering|</a></strong> <br/>
+Jorge Guerra, Himabindu Pucha, Joseph Glider, Wendy Belluomini, Raju Rangaswami<br/>
+Proceedings of USENIX File and Storage Technologies (FAST), February, 2011.
+</li>
+</ul>
+<ul>
+<li> <strong><a href="https://sylab-srv.cs.fiu.edu/_media/projects/iodedup/iodedup-fast10.pdf">I/O Deduplication: Utilizing Content Similarity to Improve I/O Performance</a></strong> <br/>
+ Ricardo Koller and  Raju Rangaswami <br/>
+Proceedings of the 8th USENIX Conference on File and Storage Technologies (FAST &#039;10), February, 2010.
+</li>
+</ul>
+<ul>
+<li> <strong><a href="https://sylab-srv.cs.fiu.edu/_media/projects/iodedup/iodedup-acmtos10.pdf">I/O Deduplication: Utilizing Content Similarity to Improve I/O Performance</a></strong> <br/>
+Ricardo Koller, Raju Rangaswami<br/>
+ACM Transactions on Storage, 6(3), September 2010.
+</li>
+</ul>
+<ul>
+<li> <strong><a href="https://sylab-srv.cs.fiu.edu/_media/projects/srcmap/srcmap-fast10.pdf">SRCMap: Energy Proportional Storage using Dynamic Consolidation</a></strong> <br/>
+ Akshat Verma, Ricardo Koller, Luis Useche, and Raju Rangaswami <br/>
+Proceedings of the 8th USENIX Conference on File and Storage Technologies (FAST &#039;10), February, 2010.
+</li>
+</ul>
+<ul>
+<li> <strong><a href="https://sylab-srv.cs.fiu.edu/lib/exe/fetch.php?tok=e78b81&amp;media=http%3A%2F%2Fwww.cs.fiu.edu%2F~raju%2FWWW%2Fpublications%2Ffast2009%2Fpaper.pdf">BORG: Block-reORGanization for Self-optimizing Storage Systems</a></strong> <br/>
+ Medha Bhadkamkar, Jorge Guerra, Luis Useche, Sam Burnett, Jason Liptak, Raju Rangaswami and Vagelis Hristidis<br/>
+Proceedings of the 7th USENIX Conference on File and Storage Technologies (FAST &#039;09), February, 2009.
+</li>
+</ul>
+<ul>
+<li> <strong><a href="https://sylab-srv.cs.fiu.edu/_media/projects/able/able-speed08.pdf">The Case for Active Block Layer Extensions</a></strong><br/>
+ Jorge Guerra, Luis Useche, Medha Bhadkamkar, Ricardo Koller, and Raju Rangaswami<br/>
+Proceedings of International Workshop on Storage and I/O Virtualization, Performance, Energy, Evaluation and Dependability (SPEED), February, 2008.
+</li>
+</ul>
+<ul>
+<li> <strong><a href="https://sylab-srv.cs.fiu.edu/lib/exe/fetch.php?tok=048ece&amp;media=http%3A%2F%2Fwww.cs.fiu.edu%2F%257Eraju%2FWWW%2Fpublications%2Fhpca2008%2Fpaper.pdf">EXCES: EXternal Caching in Energy Saving Storage Systems</a></strong><br/>
+ Luis Useche, Jorge Guerra, Medha Bhadkamkar, Mauricio Alarcon, and Raju Rangaswami<br/>
+Proceedings of IEEE International Symposium on High-Performance Computer Architecture (HPCA), February, 2008.
+</li>
+</ul>
+
+<h3 id="acknowledgement_of_support">Acknowledgement of Support</h3>
+
+<p>
+This work is supported by the National Science Foundation under grant CNS-0747038 and by the Department of Energy under grant DE-FG02-06ER25739.
+</p>
+        </section>
+      </div>
+    </article>
+  </div>
+  <div class="page__footer">
+    <footer>
+      <div class="page__footer-follow">
+        <ul class="social-icons">
+          <li><strong>Follow:</strong></li>
+          <li><a href="https://linkedin.com/in/raju-rangaswami-7b3b6849"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+          <li><a href="http://github.com/acadent"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+          <li><a href="https://scholar.google.com/citations?user=-Y_xfI8AAAAJ"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a></li>
+        </ul>
+      </div>
+      <div class="page__footer-copyright">&copy; 2026 Systems Research Laboratory.</div>
+    </footer>
+  </div>
+  <script src="https://acadent.github.io/assets/js/main.min.js"></script>
+</body>
+</html>

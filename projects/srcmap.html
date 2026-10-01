@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energy Proportional Storage Systems — Systems Research Laboratory</title>
+  <link rel="stylesheet" href="https://acadent.github.io/assets/css/main.css">
+  <link rel="icon" href="https://acadent.github.io/images/favicon.ico">
+  <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";</script>
+</head>
+<body>
+  <div class="masthead">
+    <div class="masthead__inner-wrap">
+      <div class="masthead__menu">
+        <nav id="site-nav" class="greedy-nav">
+          <button><div class="navicon"></div></button>
+          <ul class="visible-links">
+            <li class="masthead__menu-item masthead__menu-item--lg"><a href="../index.html">Systems Research Laboratory</a></li>
+            <li class="masthead__menu-item"><a href="../index.html">Home</a></li>
+            <li class="masthead__menu-item"><a href="../people.html">People</a></li>
+            <li class="masthead__menu-item"><a href="../projects.html">Projects</a></li>
+            <li class="masthead__menu-item"><a href="../publications.html">Publications</a></li>
+            <li class="masthead__menu-item"><a href="../sponsors.html">Sponsors</a></li>
+          </ul>
+          <ul class="hidden-links hidden"></ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div id="main" role="main">
+    <div class="sidebar sticky">
+      <div itemscope itemtype="http://schema.org/Person">
+        <div class="author__avatar"><img src="https://acadent.github.io/images/raju.png" class="author__avatar" alt="Raju Rangaswami"></div>
+        <div class="author__content">
+          <h3 class="author__name">Raju Rangaswami</h3>
+          <p class="author__bio">Eminent Scholar Chaired Professor, Knight Foundation School of Computing and Information Sciences</p>
+        </div>
+        <div class="author__urls-wrapper">
+          <button class="btn btn--inverse">Follow</button>
+          <ul class="author__urls social-icons">
+            <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Miami, FL</li>
+            <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Florida International Univ</li>
+            <li><a href="https://www.linkedin.com/in/raju-rangaswami-7b3b6849"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+            <li><a href="https://github.com/acadent"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+            <li><a href="https://scholar.google.com/citations?user=-Y_xfI8AAAAJ"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <article class="page">
+      <div class="page__inner-wrap">
+        <header><h1 class="page__title">Energy Proportional Storage Systems</h1></header>
+        <section class="page__content">
+<h3 id="participants">Participants</h3>
+
+<ul>
+<li> <a href="http://www.cs.fiu.edu/~jguerra/">Jorge Guerra</a>
+</li>
+<li> Wendy Belluomini
+</li>
+<li> Joseph Glider
+</li>
+<li> <a href="http://www.cs.fiu.edu/~rkoll001/">Ricardo Koller</a>
+</li>
+<li> Himabindu Pucha
+</li>
+<li> <a href="http://www.cs.fiu.edu/~lusec001/">Luis Useche</a>
+</li>
+<li> <a href="http://domino.research.ibm.com/comm/research_people.nsf/pages/akshat_verma.index.html">Akshat Verma</a>
+</li>
+<li> <a href="http://www.cs.fiu.edu/~raju/">Raju Rangaswami</a>
+</li>
+</ul>
+
+<h3 id="abstract">Abstract</h3>
+
+<p>
+The Environmental Protection Agency (EPA) estimates that energy  consumption at data centers could grow to 100 billion KWhr,
+contributing to 2.9% of the total US electricity needs, by the year 2011. In view of the growing energy requirements of data centers that directly contribute to the Total Cost of Ownership (TCO), Barroso and Holzle have made the case for energy proportionality within future computing systems. While this goal is relatively easier to achieve for subsystems with
+components that are energy proportional (e.g., CPU), it is substantially more difficult with inherently non energy-proportional
+disk devices. Furthermore, applying classical server consolidation techniques such as virtual machine (VM) migration to storage as-is is not practical because it would involve large amounts of data movement for similar migration operations.
+</p>
+
+<p>
+The goal of this project is to build energy-proportional storage systems that consume energy in proportion to the I/O workload
+intensity. The high-level approach we propose is dynamic workload consolidation on a subset of the physical storage devices combined with transitioning the remaining devices to low power states in response to changes in workload intensity.
+</p>
+
+<h3 id="publications">Publications</h3>
+
+<ul>
+<li> <strong>Cost Effective Storage Using Extent Based Dynamic Tiering</strong> <a href="https://sylab-srv.cs.fiu.edu/_media/projects/srcmap/edt-fast11.pdf">pdf</a> <br/>
+Jorge Guerra, Himabindu Pucha, Joseph Glider, Wendy Belluomini, Raju Rangaswami<br/>
+Proceedings of USENIX File and Storage Technologies (FAST), February, 2011.
+</li>
+</ul>
+<ul>
+<li> <strong>SRCMap: Energy Proportional Storage Using Dynamic Consolidation</strong> <a href="https://sylab-srv.cs.fiu.edu/_media/projects/srcmap/srcmap-fast10.pdf">pdf</a> <br/>
+Akshat Verma, Ricardo Koller, Luis Useche, Raju Rangaswami<br/>
+Proceedings of USENIX File and Storage Technologies (FAST), February, 2010.
+</li>
+</ul>
+
+<h3 id="traces">Traces</h3>
+
+<p>
+Below, we present a set of multi-day block traces taken on real running system. All the systems were running Linux using the ext3 file system.
+</p>
+<table>
+	<thead>
+	<tr>
+		<th> Files (blktrace) </th><th> Description </th>
+	</tr>
+	</thead>
+	<tr>
+		<td> <a href="https://sylab-srv.cs.fiu.edu/_media/projects/srcmap/home1.tar.gz">home1.tar.gz</a>  <a href="https://sylab-srv.cs.fiu.edu/_media/projects/srcmap/home2.tar.gz">home2.tar.gz</a>  <a href="https://sylab-srv.cs.fiu.edu/_media/projects/srcmap/home3.tar.gz">home3.tar.gz</a>  <a href="https://sylab-srv.cs.fiu.edu/_media/projects/srcmap/home4.tar.gz">home4.tar.gz</a> </td><td> Four different end-user / developer home directories. </td>
+	</tr>
+	<tr>
+		<td> <a href="https://sylab-srv.cs.fiu.edu/_media/projects/srcmap/mail.tar.gz">mail.tar.gz</a> </td><td> Mail server of our department using Postfix. Only the INBOX accesses are recorded.</td>
+	</tr>
+	<tr>
+		<td> <a href="https://sylab-srv.cs.fiu.edu/_media/projects/srcmap/online.tar.gz">online.tar.gz</a> </td><td> Course management system of our department using Moodle. </td>
+	</tr>
+	<tr>
+		<td> <a href="https://sylab-srv.cs.fiu.edu/_media/projects/srcmap/webmail.tar.gz">webmail.tar.gz</a> </td><td> Web interface to the department mail server. </td>
+	</tr>
+	<tr>
+		<td> <a href="https://sylab-srv.cs.fiu.edu/_media/projects/srcmap/webresearch.tar.gz">webresearch.tar.gz</a> </td><td> Web-based management of around 10 FIU research projects using Apache web server.</td>
+	</tr>
+	<tr>
+		<td> <a href="https://sylab-srv.cs.fiu.edu/_media/projects/srcmap/webusers.tar.gz">webusers.tar.gz</a> </td><td> Web server hosting faculty, staff, and graduate student web sites. </td>
+	</tr>
+</table>
+
+<p>
+The traces files (one per day) are in <abbr title="American Standard Code for Information Interchange">ASCII</abbr> and each record is as follows:
+</p>
+<pre>[ts in ns] [pid] [process] [lba] [size in 512 Bytes blocks] [Write or Read] [major device number] [minor device number] [MD5 per 4096 Bytes]</pre>
+
+<p>
+In the case of the home traces the format is different for the digests:
+</p>
+<pre>[ts in ns] [pid] [process] [lba] [size in 512 Bytes blocks] [Write or Read] [major device number] [minor device number] [MD5 per 512 Bytes]</pre>
+
+<h3 id="acknowledgement_of_support">Acknowledgement of Support</h3>
+
+<p>
+This work is supported by the National Science Foundation under grant CNS-1018262 and by IBM Corporation.
+</p>
+        </section>
+      </div>
+    </article>
+  </div>
+  <div class="page__footer">
+    <footer>
+      <div class="page__footer-follow">
+        <ul class="social-icons">
+          <li><strong>Follow:</strong></li>
+          <li><a href="https://linkedin.com/in/raju-rangaswami-7b3b6849"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+          <li><a href="http://github.com/acadent"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+          <li><a href="https://scholar.google.com/citations?user=-Y_xfI8AAAAJ"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a></li>
+        </ul>
+      </div>
+      <div class="page__footer-copyright">&copy; 2026 Systems Research Laboratory.</div>
+    </footer>
+  </div>
+  <script src="https://acadent.github.io/assets/js/main.min.js"></script>
+</body>
+</html>

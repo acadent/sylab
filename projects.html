@@ -54,22 +54,22 @@
 <h2>Recent Projects</h2>
 
       <section>
-        <h3>Generalized Caching as a Service</h3>
+        <h3><a href="projects/caas.html">Generalized Caching as a Service</a></h3>
         <p>Caching has been a consistent tool of designers of high-performance, scalable computing systems, but it has been deployed in so many ways that it can be difficult to standardize and scale in cloud systems. This project elevates the use of caching in cloud-scale storage systems to a first-class citizen by designing and implementing generalized Caching-as-a-Service (CaaS). CaaS defines transformative technology along four complementary dimensions. First, it defines a new abstraction and architecture for storage caches whereby storage stacks can easily embed lightweight CaaS clients within a distributed compute infrastructure. Second, CaaS formulates and theoretically analyzes distributed caching algorithms that operate within the CaaS service such that individual CaaS server nodes cooperate towards achieving globally optimal caching decisions. Third, the distributed CaaS clients and servers are co-designed to achieve strict durability and fault-tolerance in their implementations. And finally, all of the CaaS advancements are driven by insights generated from a detailed whole-system simulator that models the diverse cache devices, network configurations, and application demand.</p>
       </section>
 
       <section>
-        <h3>Cacheus</h3>
+        <h3><a href="projects/cacheus.html">Cacheus</a></h3>
         <p>Recent advances in machine learning open up new and attractive approaches for solving classic problems in computing systems. For storage systems, cache replacement is one such problem because of its enormous impact on performance. CACHEUS represents a new class of fully adaptive, machine-learned caching algorithms that utilize a combination of experts designed to address a variety of workload primitive types. The experts used by CACHEUS include the state-of-the-art ARC, LIRS and LFU, and two new ones — SR-LRU, a scan-resistant version of LRU, and CR-LFU, a churn-resistant version of LFU. CACHEUS using the newly proposed lightweight experts, SR-LRU and CR-LFU, is the most consistently performing caching algorithm across a range of workloads and cache sizes. Furthermore, CACHEUS enables augmenting state-of-the-art algorithms (e.g., LIRS, ARC) by combining it with a complementary cache replacement algorithm (e.g., LFU) to better handle a wider variety of workload primitive types.</p>
       </section>
 
       <section>
-        <h3>Region System</h3>
+        <h3><a href="projects/region-system.html">Region System</a></h3>
         <p>Modern operating systems have been designed around the hypotheses that (a) memory is both byte-addressable and volatile and (b) storage is block addressable and persistent. The arrival of new Persistent Memory (PM) technologies has made these assumptions obsolete. Despite much of the recent work in this space, the need for consistently sharing PM data across multiple applications remains an urgent, unsolved problem. The Region System is a high-performance operating system stack for PM that implements usable consistency and persistence for application data. The region system provides support for consistently mapping and sharing data resident in PM across user application address spaces. Its high-performance design minimizes the expensive PM ordering and durability operations by embracing a minimalistic approach to metadata construction and management. Finally, the region system creates a novel IPI based PMSYNC operation, which ensures atomic persistence of mapped pages across multiple address spaces.</p>
       </section>
 
       <section>
-        <h3>NVM-enabled Host-side Caches</h3>
+        <h3><a href="projects/nvm-caches.html">NVM-enabled Host-side Caches</a></h3>
         <p>The goals of this NVM Caching project are to:</p>
         <ul>
           <li>develop selective caching algorithms that better utilize non-datapath NVM caches on the host,</li>
@@ -79,58 +79,58 @@
       </section>
 
       <section>
-        <h3>Non-blocking Writes</h3>
+        <h3><a href="projects/nbw.html">Non-blocking Writes</a></h3>
         <p>In current operating systems, writes to pages that are not in core memory require the process to block until the page can be fetched from the backing store. This project investigates buffering the write to a temporary page in core memory, so as to unblock the process to continue computation, and applying the write asynchronously. Research tasks include study and experimentation with implementation techniques for deferring out-of-core page writes, analysis of how scheduling and other aspects of the operating system may need to be modified in order to realize the full benefits of write deferral, and empirical studies to assess the performance impact of write deferral on a variety of applications. By incorporating non-blocking writes within the operating system, applications can transparently benefit from a performance improvement, without any modification to the application. The potential performance benefits apply to a broad spectrum of computer systems and applications.</p>
       </section>
 
       <section>
-        <h3>Programming Abstractions for Persistent Memory</h3>
+        <h3><a href="projects/persistent-memory.html">Programming Abstractions for Persistent Memory</a></h3>
         <p>Persistent memory systems promise a new era of computing where data management is simplified significantly. For the very first time, applications will be able to directly access devices that can respond with latencies close to DRAM latencies and at the same time, store data persistently without the intervention of the operating system (OS). Fully realizing the potential of this new technology requires that new applications are able to integrate access to these devices and exploit their unique capabilities to the fullest with little additional effort. Moreover, enabling existing applications to easily transition to using this new technology will be critical to the success of persistent memory technologies in the marketplace. The goals of this proposal are directed towards optimal integration of persistent memory devices within existing system software and ease of use within existing application programming paradigms.</p>
       </section>
 
       <section>
-        <h3>Software Persistent Memory (SoftPM)</h3>
+        <h3><a href="projects/softpm.html">Software Persistent Memory (SoftPM)</a></h3>
         <p>Current high-end computing (HEC) applications explicitly manage persistent data, including both application state and application output. This practice not only increases development time and cost, but also requires an application developer to be intimately aware of the underlying platform-dependent storage mechanisms to achieve good application I/O performance. The Software Persistent Memory (SoftPM) project builds a lightweight infrastructure for streamlining data management in next generation HEC applications. SoftPM eliminates the duality of data management in HEC applications by allowing applications to allocate persistent memory in much the same way volatile memory is allocated and easily restore, browse, and interact with past versions of persistent memory state. This simplifies the implementation of three broad capabilities required in HEC applications — recoverability (e.g., checkpoint-restart), record-replay (e.g., data-visualization), and execution branching (e.g., simulation model-space exploration).</p>
       </section>
 
       <section>
-        <h3>Generalized ERSS Tree Model</h3>
+        <h3><a href="projects/gerss-trees.html">Generalized ERSS Tree Model</a></h3>
         <p>Accurately characterizing the resource usage of an application at various levels in the memory hierarchy has been a long-standing research problem. The studies thus far have also implicitly assumed that there is no contention for the resource under consideration. The inevitable future of virtualization driven consolidation necessitates the sharing of physical resources at all levels of the memory hierarchy by multiple virtual machines. We present a unifying Generalized ERSS Tree Model that characterizes the resource usage at all levels of the memory hierarchy during the entire life-time of an application. Our model characterizes capacity requirements, the rate of use, and the impact of resource contention, at each level of memory. We present a methodology to build the model and demonstrate how it can be used for the accurate provisioning of the memory hierarchy in a consolidated environment.</p>
       </section>
 
       <section>
-        <h3>I/O Deduplication</h3>
+        <h3><a href="projects/iodedup.html">I/O Deduplication</a></h3>
         <p>Duplication of data in storage systems is becoming increasingly common. We introduce I/O Deduplication, a storage optimization that utilizes content similarity for improving I/O performance by eliminating I/O operations and reducing the mechanical delays during I/O operations. I/O Deduplication consists of three main techniques: content-based caching, dynamic replica retrieval, and selective duplication.</p>
       </section>
 
       <section>
-        <h3>Energy Proportional Storage Systems</h3>
+        <h3><a href="projects/srcmap.html">Energy Proportional Storage Systems</a></h3>
         <p>The Environmental Protection Agency (EPA) estimates that energy consumption at data centers could grow to 100 billion KWhr, contributing to 2.9% of the total US electricity needs, by the year 2011. This project investigates fundamentally new techniques for building energy proportional storage systems that consume energy in proportion to the I/O workload intensity. It takes the view that a carefully constructed data replication based approach (instead of data migration) combined with background data synchronization for consistency provide more effective mechanisms for enabling dynamic storage consolidation.</p>
       </section>
 
       <section>
-        <h3>Resource Management in Virtualized Data Center</h3>
+        <h3><a href="projects/virtualization.html">Resource Management in Virtualized Data Center</a></h3>
         <p>Performance models provide the ability to predict application performance for a given set of hardware resources and are used for capacity planning and resource management. Traditional performance models assume the availability of dedicated hardware for the application. In this paper, we build performance models for applications in virtualized environments. We identify a key set of virtualization architecture independent parameters that influence application performance for a diverse and representative set of applications. We propose an iterative model training technique based on artificial neural networks which is found to be accurate across a range of applications.</p>
       </section>
 
       <section>
-        <h3>Active Block-Layer Extensions</h3>
+        <h3><a href="projects/able.html">Active Block-Layer Extensions</a></h3>
         <p>The Active Block Layer Extensions (ABLE) project presents a new approach to realizing self-managing storage systems. It makes two contributions. First, it creates an evolvable block layer software infrastructure that substantially reduces the complexity involved in building self-managing storage systems by raising the level of abstraction for their development. Second, it develops a theory of storage extensions that provides a logic framework for analyzing extensions developed at the block layer.</p>
       </section>
 
       <section>
-        <h3>Block reORGanization for Self-optimizing Storage Systems</h3>
+        <h3><a href="projects/borg.html">Block reORGanization for Self-optimizing Storage Systems</a></h3>
         <p>BORG is a self-optimizing storage system that performs automatic block reorganization based on the observed I/O workload. BORG is motivated by three characteristics of I/O workloads: non-uniform access frequency distribution, temporal locality, and partial determinism in non-sequential accesses. To achieve its objective, BORG manages a small, dedicated partition on the disk drive, with the goal of servicing a majority of the I/O requests from within this partition with significantly reduced seek and rotational delays.</p>
       </section>
 
       <section>
-        <h3>EXternal Caching in Energy Saving Storage Systems</h3>
+        <h3><a href="projects/exces.html">EXternal Caching in Energy Saving Storage Systems</a></h3>
         <p>Power consumption within the disk-based storage subsystem forms a substantial portion of the overall energy footprint in commodity systems. We present the design and implementation of EXCES, an external caching system that employs prefetching, caching, and buffering of disk data for reducing disk activity. EXCES addresses important questions related to external caching, including the estimation of future data popularity, I/O indirection, continuous reconfiguration of the ECD contents, and data consistency.</p>
       </section>
 
       <h2>Past Projects</h2>
       <section>
-        <h3>Semistructured Storage Systems</h3>
+        <h3><a href="projects/xml-storage.html">Semistructured Storage Systems</a></h3>
         <p>Storage, data placement, semistructured data, semisequential placement, XML, DOM, SAX.</p>
       </section>
         </section>

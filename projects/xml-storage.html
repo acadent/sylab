@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semistructured Storage Systems — Systems Research Laboratory</title>
+  <link rel="stylesheet" href="https://acadent.github.io/assets/css/main.css">
+  <link rel="icon" href="https://acadent.github.io/images/favicon.ico">
+  <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";</script>
+</head>
+<body>
+  <div class="masthead">
+    <div class="masthead__inner-wrap">
+      <div class="masthead__menu">
+        <nav id="site-nav" class="greedy-nav">
+          <button><div class="navicon"></div></button>
+          <ul class="visible-links">
+            <li class="masthead__menu-item masthead__menu-item--lg"><a href="../index.html">Systems Research Laboratory</a></li>
+            <li class="masthead__menu-item"><a href="../index.html">Home</a></li>
+            <li class="masthead__menu-item"><a href="../people.html">People</a></li>
+            <li class="masthead__menu-item"><a href="../projects.html">Projects</a></li>
+            <li class="masthead__menu-item"><a href="../publications.html">Publications</a></li>
+            <li class="masthead__menu-item"><a href="../sponsors.html">Sponsors</a></li>
+          </ul>
+          <ul class="hidden-links hidden"></ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div id="main" role="main">
+    <div class="sidebar sticky">
+      <div itemscope itemtype="http://schema.org/Person">
+        <div class="author__avatar"><img src="https://acadent.github.io/images/raju.png" class="author__avatar" alt="Raju Rangaswami"></div>
+        <div class="author__content">
+          <h3 class="author__name">Raju Rangaswami</h3>
+          <p class="author__bio">Eminent Scholar Chaired Professor, Knight Foundation School of Computing and Information Sciences</p>
+        </div>
+        <div class="author__urls-wrapper">
+          <button class="btn btn--inverse">Follow</button>
+          <ul class="author__urls social-icons">
+            <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Miami, FL</li>
+            <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Florida International Univ</li>
+            <li><a href="https://www.linkedin.com/in/raju-rangaswami-7b3b6849"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+            <li><a href="https://github.com/acadent"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+            <li><a href="https://scholar.google.com/citations?user=-Y_xfI8AAAAJ"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <article class="page">
+      <div class="page__inner-wrap">
+        <header><h1 class="page__title">Semistructured Storage Systems</h1></header>
+        <section class="page__content">
+<h3 id="authors">Authors</h3>
+
+<ul>
+<li> <a href="http://www.cs.fiu.edu/~mbhad001/">Medha Bhadkamkar</a>
+</li>
+<li> <a href="http://www.cs.fiu.edu/~ffarf001/">Fernando Farfan</a>
+</li>
+<li> <a href="http://www.cs.fiu.edu/~vagelis/">Dr. Vagelis Hristidis</a>
+</li>
+<li> <a href="http://www.cs.fiu.edu/~raju/">Dr. Raju Rangaswami</a>
+</li>
+</ul>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>
+An increasing number of applications manage large amounts of semistructured data. Common applications that use semistructured data today include Bioinformatics sequence search and alignment, genomic data analysis, multi-resolution video storage, clinical data systems, XML databases, and more . Given that a semi-structure such as a tree provides a more intuitive way of managing large amounts of data, the trend of storing data in such formats is likely to strengthen in the future.
+</p>
+
+<p>
+Current approaches to store semistructured data either map the data to an underlying relational database system, use the abstraction provided by a general-purpose object storage manager, or use a combination of flat files and indices (e.g., XALAN, XT, Galax, BLAST, Timber and Natix). Since these approaches retrofit existing storage mechanisms to work with semistructured data, their scope is restricted to the underlying mechanisms, which are predominantly optimized for sequential accesses. Consequently, these approaches may result in a mismatch between the structure and navigational primitives of semistructured data and the access characteristics of disk drives. In particular, semistructured data have a <em>tree</em> (or <em>graph</em>) structure with tree-type operations. Relational databases, on the other hand, store structured tables that are optimized for row-based access, and flat files are unstructured, optimized for sequential access. Further complicating this mismatch, the underlying storage device, i.e. disk drives, store information in circular tracks that are accessed with mechanical seek and rotational overhead. Given the growing amount of semistructured data, there is a need for re-examining the current storage and access machinery that support them.
+</p>
+
+<p>
+In this project, we evaluate strategies to optimize the storage and retrieval of semistructured data on disk drives by explicitly accounting for the mismatch between the structure of the data and the disk drive storage and access characteristics. In particular, this chapter presents algorithms that given the physical characteristics of a disk drive (number of tracks, sectors per track and rotational speed.), place semistructured data on the disk drive in a way that facilitates navigation of the data by reducing access overheads. Such low-level control of data layout is made possible using information provided by standard disk profiling tools.
+</p>
+
+<p>
+The proposed technique first addresses the problem of grouping nodes of semistructured data trees so that they can be mapped to disk blocks. This chapter presents the development and experimental evaluation of grouping strategies, which are compared with the Enhanced Kundu Misra (EKM) grouping strategy. Second, the proposed on-disk layout strategy for node groups optimizes common tree navigation operations such as parent-to-child and node-to-next-sibling traversals. These on-disk layout strategies make use of semi-sequential disk access technique that allows the reduction and even elimination of rotational delay overhead during disk accesses.
+</p>
+
+<p>
+Given that this approach requires circumventing the prevalent <em>logical block abstraction</em>, applying this layout strategy to a general purpose storage system is not straightforward. The goal of these techniques is simply to expose the merits and demerits of this approach. Through experiments we show that our proposed approach is superior for a dedicated single-user storage system with standard caching and prefetching capabilities – for instance, a specialized system for analysis of biological data (suffix trees). Based on this study, we believe that our approach provides a fresh perspective on the problem of storing semistructured data that is worth the attention and research time of the community.
+</p>
+
+<p>
+To evaluate the proposed native data layout techniques, we used XML as a case study. XML is becoming increasingly popular due to its ability to represent arbitrary semistructured data. It is the de facto data representation format for many modern applications, including Geographic Information Systems Markup Language (GML), Medical Markup Language (MML), Health Level HL7, Clinical Document Architecture (CDA) used to represent Electronic Health Records (EHRs), Open Document Format (ODF), and Scalable Vector Graphics (SVG) used to describe two-dimensional graphics and graphical applications. Despite the widespread use of XML, the challenge of optimizing access to XML data stores is a key challenge also identified in the latest report on the future directions on database research, published every few years by the database research community.
+</p>
+
+<h3 id="publications">Publications</h3>
+
+<p>
+M. Bhadkamkar, F. Farfán, V. Hristidis, and R. Rangaswami. <strong>Storing Semi-structured Data on Disk Drives.</strong> ACM Transactions on Storage, Vol. 5, Issue # 2, May, 2009.
+</p>
+
+<p>
+Medha Bhadkamkar, Fernando Farfán, Vagelis Hristidis and Raju Rangaswami. <strong>Efficient Native Storage Systems for Semistructured Data.</strong> Florida International University Technical Report TR-2006-09-01. September 2006.
+</p>
+
+<p>
+Medha Bhadkamkar, Fernando Farfán, Vagelis Hristidis, and Raju Rangaswami. <strong>Storing Trees on Disk Drives.</strong> Proceedings of the File and Storage Technologies WiP, 2005.
+</p>
+        </section>
+      </div>
+    </article>
+  </div>
+  <div class="page__footer">
+    <footer>
+      <div class="page__footer-follow">
+        <ul class="social-icons">
+          <li><strong>Follow:</strong></li>
+          <li><a href="https://linkedin.com/in/raju-rangaswami-7b3b6849"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+          <li><a href="http://github.com/acadent"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+          <li><a href="https://scholar.google.com/citations?user=-Y_xfI8AAAAJ"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a></li>
+        </ul>
+      </div>
+      <div class="page__footer-copyright">&copy; 2026 Systems Research Laboratory.</div>
+    </footer>
+  </div>
+  <script src="https://acadent.github.io/assets/js/main.min.js"></script>
+</body>
+</html>

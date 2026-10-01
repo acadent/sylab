@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NVM-enabled Host-side Caches — Systems Research Laboratory</title>
+  <link rel="stylesheet" href="https://acadent.github.io/assets/css/main.css">
+  <link rel="icon" href="https://acadent.github.io/images/favicon.ico">
+  <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";</script>
+</head>
+<body>
+  <div class="masthead">
+    <div class="masthead__inner-wrap">
+      <div class="masthead__menu">
+        <nav id="site-nav" class="greedy-nav">
+          <button><div class="navicon"></div></button>
+          <ul class="visible-links">
+            <li class="masthead__menu-item masthead__menu-item--lg"><a href="../index.html">Systems Research Laboratory</a></li>
+            <li class="masthead__menu-item"><a href="../index.html">Home</a></li>
+            <li class="masthead__menu-item"><a href="../people.html">People</a></li>
+            <li class="masthead__menu-item"><a href="../projects.html">Projects</a></li>
+            <li class="masthead__menu-item"><a href="../publications.html">Publications</a></li>
+            <li class="masthead__menu-item"><a href="../sponsors.html">Sponsors</a></li>
+          </ul>
+          <ul class="hidden-links hidden"></ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div id="main" role="main">
+    <div class="sidebar sticky">
+      <div itemscope itemtype="http://schema.org/Person">
+        <div class="author__avatar"><img src="https://acadent.github.io/images/raju.png" class="author__avatar" alt="Raju Rangaswami"></div>
+        <div class="author__content">
+          <h3 class="author__name">Raju Rangaswami</h3>
+          <p class="author__bio">Eminent Scholar Chaired Professor, Knight Foundation School of Computing and Information Sciences</p>
+        </div>
+        <div class="author__urls-wrapper">
+          <button class="btn btn--inverse">Follow</button>
+          <ul class="author__urls social-icons">
+            <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Miami, FL</li>
+            <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Florida International Univ</li>
+            <li><a href="https://www.linkedin.com/in/raju-rangaswami-7b3b6849"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+            <li><a href="https://github.com/acadent"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+            <li><a href="https://scholar.google.com/citations?user=-Y_xfI8AAAAJ"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <article class="page">
+      <div class="page__inner-wrap">
+        <header><h1 class="page__title">NVM-enabled Host-side Caches</h1></header>
+        <section class="page__content">
+<p>
+The goals of this NVM Caching project are to:
+</p>
+<ul>
+<li> develop selective caching algorithms that better utilize non-datapath NVM caches on the host,
+</li>
+</ul>
+<ul>
+<li> develop a model for component availability and failure domains leading to a fault-tolerant write caching design for systems,
+</li>
+</ul>
+<ul>
+<li> develop co-operative cache partitioning techniques for DRAM and NVM enabled caches, and
+</li>
+</ul>
+<ul>
+<li> develop data reduction techniques for host-side NVM caches.
+</li>
+</ul>
+
+<h3 id="investigators">Investigators</h3>
+
+<ul>
+<li> <a href="http://www.cs.fiu.edu/~dcamp020/">Raju Rangaswami</a>
+</li>
+<li> <a href="http://www.cs.fiu.edu/~hlope048/">Ming Zhao</a>
+</li>
+<li> <a href="http://www.cs.fiu.edu/~lusec001/">Giri Narasimhan</a>
+</li>
+<li> <a href="http://users.cis.fiu.edu/~rkoll001/">Jason Liu</a>
+</li>
+</ul>
+
+<h3 id="participants">Participants</h3>
+
+<ul>
+<li> Steven Lyons
+</li>
+<li> Liana Valdes
+</li>
+<li> Farzana Yusuf
+</li>
+<li> Giuseppe Vietri
+</li>
+<li> Mohammad Obaida
+</li>
+<li> Muhammad Chowdhury
+</li>
+<li> Wenji Li
+</li>
+<li> Qirui Yang
+</li>
+<li> Yitao Chen
+</li>
+<li> Humberto Chacon
+</li>
+</ul>
+
+<h3 id="abstract">Abstract</h3>
+
+<p>
+Non-volatile memory (NVM) is a transformative technology that is dramatically changing how data storage systems of the future are built. This technology allows an unprecedented combination of performance and persistence into a single device. This project will develop a suite of storage caching techniques for this transformative technology along four complementary dimensions. The first two usage dimensions address the selective use of NVM as host-side read caches for persistently stored data as well as using their persistence properties explicitly by developing fault-tolerant write caching solutions. The latter two develop advanced techniques for delivering storage quality of service (QoS) using NVM caches and building caching algorithms that are aware of data reduction techniques, such as deduplication and compression, for the NVM layer. Together, these contributions have the potential to transform enterprise data center storage stacks by readily adopting the best properties of current and future NVM technology. The expected performance benefits apply to a broad spectrum of computer systems and applications.
+</p>
+
+<p>
+Educational activities will include the involvement of undergraduate students and incorporation of the project&#039;s research findings into coursework. Planned outreach activities will focus on recruitment of under-represented students from minority groups in computer science for participation in the project. Transition of the new technologies to practice through open source distribution of the Linux operating system and KVM hypervisor code implementing the innovations are successful expectations.
+</p>
+
+<h3 id="publications">Publications</h3>
+
+<ul>
+<li>  <strong>Non-blocking Writes to Files</strong> <a href="https://sylab-srv.cs.fiu.edu/_media/projects/nbw-fast15.pdf">pdf</a><br/>
+Daniel Campello, Hector Lopez, Luis Useche, Ricardo Koller, and Raju Rangaswami<br/>
+Proceedings of USENIX File and Storage Technologies (FAST), February, 2015.
+</li>
+</ul>
+<ul>
+<li>  <strong>StepAhead: Rethinking File System Namespace Translations</strong>, Asia-Pacific Workshop on Systems (APSys), August 2016.
+</li>
+</ul>
+<ul>
+<li>  <strong>Native <abbr title="Operating System">OS</abbr> Support for Persistent Memory with Regions</strong>, International Conference on Mass Storage Systems and Technology (MSST), May 2017.
+</li>
+</ul>
+<ul>
+<li>  <strong>Synergy: A Hypervisor Managed Holistic Caching System</strong>, IEEE Transactions on Cloud Computing, Volume PP, Number 99, February 2017.
+</li>
+</ul>
+<ul>
+<li>  <strong>Analyzing adaptive cache replacement strategies</strong>, arXiv:1503.07624, April 2017.
+</li>
+</ul>
+<ul>
+<li>  <strong>In Search of the Ideal Storage Configuration for Docker Containers</strong>, Vasily Tarasov, Lukas Rupprecht, Dimitris Skourtis, Amit Warke, Dean Hildebrand, Mohamed Mohamed, Nagapramod Mandagere, Wenji Li, Raju Rangaswami,and Ming Zhao, Proceedings of the Workshop on Autonomic Management of Large Scale Container-based Systems (AMLCS), 2017
+</li>
+</ul>
+<ul>
+<li>  <strong>Driving Cache Replacement with ML-based LeCaR</strong>, Vietri, Rodriguez, Martinez, Lyons, Liu, Rangaswami, Zhao, Narasimhan, USENIX HotStorage 2018.
+</li>
+</ul>
+<ul>
+<li>  <strong>Parallel Application Performance Prediction Using Analysis Based Models and HPC Simulations</strong>, Mohammad Abu Obaida, Jason Liu, Gopinath Chennupati, Nandakishore Santhi, and Stephan Eidenbenz,2018 SIGSIM Conference on Principles of Advanced Discrete Simulation (SIGSIM-PADS’18), May 2018.
+</li>
+</ul>
+<ul>
+<li>  <strong>RTVirt: Enabling Time-sensitive Computing on Virtualized Systems through Cross-layer CPU Scheduling</strong>, M. Zhao and J. Cabrera, European Conference on Computer Systems (EuroSys).
+</li>
+</ul>
+<ul>
+<li>  <strong>Cross-layer Optimization for Virtual Machine Resource Management”</strong>, M. Zhao, L. Wang, Y. Lv, and J. Xu, IEEE International Conference on Cloud Engineering (IC2E).
+</li>
+</ul>
+
+<h3 id="public_software">Public Software</h3>
+
+<ul>
+<li> <a href="nbw-traces.html">Traces used in the paper titled &quot;Non-blocking Writes to Files&quot;, Proceedings of USENIX FAST 2015.</a>
+</li>
+</ul>
+
+<h3 id="acknowledgement_of_support">Acknowledgement of Support</h3>
+
+<p>
+This work is supported in part by the National Science Foundation under grant CNS-1320426 and by a NetApp Faculty Fellowship.
+</p>
+        </section>
+      </div>
+    </article>
+  </div>
+  <div class="page__footer">
+    <footer>
+      <div class="page__footer-follow">
+        <ul class="social-icons">
+          <li><strong>Follow:</strong></li>
+          <li><a href="https://linkedin.com/in/raju-rangaswami-7b3b6849"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+          <li><a href="http://github.com/acadent"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+          <li><a href="https://scholar.google.com/citations?user=-Y_xfI8AAAAJ"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a></li>
+        </ul>
+      </div>
+      <div class="page__footer-copyright">&copy; 2026 Systems Research Laboratory.</div>
+    </footer>
+  </div>
+  <script src="https://acadent.github.io/assets/js/main.min.js"></script>
+</body>
+</html>

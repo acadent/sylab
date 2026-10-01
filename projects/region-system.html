@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Region System — Systems Research Laboratory</title>
+  <link rel="stylesheet" href="https://acadent.github.io/assets/css/main.css">
+  <link rel="icon" href="https://acadent.github.io/images/favicon.ico">
+  <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";</script>
+</head>
+<body>
+  <div class="masthead">
+    <div class="masthead__inner-wrap">
+      <div class="masthead__menu">
+        <nav id="site-nav" class="greedy-nav">
+          <button><div class="navicon"></div></button>
+          <ul class="visible-links">
+            <li class="masthead__menu-item masthead__menu-item--lg"><a href="../index.html">Systems Research Laboratory</a></li>
+            <li class="masthead__menu-item"><a href="../index.html">Home</a></li>
+            <li class="masthead__menu-item"><a href="../people.html">People</a></li>
+            <li class="masthead__menu-item"><a href="../projects.html">Projects</a></li>
+            <li class="masthead__menu-item"><a href="../publications.html">Publications</a></li>
+            <li class="masthead__menu-item"><a href="../sponsors.html">Sponsors</a></li>
+          </ul>
+          <ul class="hidden-links hidden"></ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div id="main" role="main">
+    <div class="sidebar sticky">
+      <div itemscope itemtype="http://schema.org/Person">
+        <div class="author__avatar"><img src="https://acadent.github.io/images/raju.png" class="author__avatar" alt="Raju Rangaswami"></div>
+        <div class="author__content">
+          <h3 class="author__name">Raju Rangaswami</h3>
+          <p class="author__bio">Eminent Scholar Chaired Professor, Knight Foundation School of Computing and Information Sciences</p>
+        </div>
+        <div class="author__urls-wrapper">
+          <button class="btn btn--inverse">Follow</button>
+          <ul class="author__urls social-icons">
+            <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Miami, FL</li>
+            <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Florida International Univ</li>
+            <li><a href="https://www.linkedin.com/in/raju-rangaswami-7b3b6849"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+            <li><a href="https://github.com/acadent"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+            <li><a href="https://scholar.google.com/citations?user=-Y_xfI8AAAAJ"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <article class="page">
+      <div class="page__inner-wrap">
+        <header><h1 class="page__title">Region System</h1></header>
+        <section class="page__content">
+<h3 id="authors">Authors</h3>
+
+<ul>
+<li> Mohammad Chowdhury
+</li>
+<li> Ashikee Ghosh
+</li>
+<li> Adnan Maruf
+</li>
+<li> Liana Valdez
+</li>
+<li> <a href="http://www.cs.fiu.edu/~raju/">Raju Rangaswami</a>
+</li>
+</ul>
+
+<h3 id="abstract">Abstract</h3>
+
+<p>
+Modern operating systems have been designed around the hypotheses that (a) memory is both byte-addressable and volatile and (b) storage is block addressable and persistent. The arrival of new Persistent Memory (PM) technologies, has made these assumptions obsolete. Despite much of the recent work in this space, the need for consistently sharing PM data across multiple applications remains an urgent, unsolved problem.<br/>
+The <em>Region System</em> is a high-performance operating system stack for PM that implements usable consistency and persistence for application data. The region system provides support for consistently mapping and sharing data resident in PM across user application address spaces. Its high-performance design minimizes the expensive PM ordering and durability operations by embracing a minimalistic approach to metadata construction and management. Finally, the region system creates a novel IPI based PMSYNC operation, which ensures atomic persistence of mapped pages across multiple address spaces.
+</p>
+
+<h3 id="publications">Publications</h3>
+
+<ul>
+<li>  <strong>Native <abbr title="Operating System">OS</abbr> Support for Persistent Memory with Regions</strong> <a href="https://sylab-srv.cs.fiu.edu/lib/exe/fetch.php?tok=4d2a87&amp;media=http%3A%2F%2Fwww.cs.fiu.edu%2F~raju%2FWWW%2Fpublications%2Fmsst2017%2Fpaper.pdf">pdf</a><br/>
+Mohammad Chowdhury and Raju Rangaswami<br/>
+Proceedings of the International Conference on Mass Storage Systems and Technology (MSST), 2017.
+</li>
+</ul>
+<ul>
+<li>  <strong>LibPM: Simplifying Application Usage of Persistent Memory</strong> <a href="https://sylab-srv.cs.fiu.edu/lib/exe/fetch.php?tok=3163a8&amp;media=http%3A%2F%2Fwww.cs.fiu.edu%2F~raju%2FWWW%2Fpublications%2Facmtos2018%2Fpaper.pdf">pdf</a> <br/>
+Leonardo Marmol, Mohammad Chowdhury, and Raju Rangaswami <br/>
+ACM Transactions on Storage, Volume 14 Issue 4, December 2018, Article No. 34.
+</li>
+</ul>
+
+<h3 id="public_software">Public Software</h3>
+
+<ul>
+<li> Coming Soon
+</li>
+</ul>
+
+<h3 id="acknowledgement_of_support">Acknowledgement of Support</h3>
+
+<p>
+This work is supported in part by the National Science Foundation under grant <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1718335">CCF-1718335</a>
+</p>
+        </section>
+      </div>
+    </article>
+  </div>
+  <div class="page__footer">
+    <footer>
+      <div class="page__footer-follow">
+        <ul class="social-icons">
+          <li><strong>Follow:</strong></li>
+          <li><a href="https://linkedin.com/in/raju-rangaswami-7b3b6849"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+          <li><a href="http://github.com/acadent"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+          <li><a href="https://scholar.google.com/citations?user=-Y_xfI8AAAAJ"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a></li>
+        </ul>
+      </div>
+      <div class="page__footer-copyright">&copy; 2026 Systems Research Laboratory.</div>
+    </footer>
+  </div>
+  <script src="https://acadent.github.io/assets/js/main.min.js"></script>
+</body>
+</html>
